@@ -7,16 +7,7 @@ import (
 )
 
 func TestFoo(t *testing.T) {
-	tests := []struct {
-		name string
-	}{
-		{
-			name: "happy path",
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(_ *testing.T) {
-			p1.Foo()
-		})
-	}
+	t.Run("happy path", func(_ *testing.T) {
+		p1.Foo()
+	})
 }
